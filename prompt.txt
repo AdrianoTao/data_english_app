@@ -1,0 +1,35 @@
+You are an expert linguist and curriculum designer specializing in creating advanced English learning materials for C1/C2 level students whose native language is Brazilian Portuguese.
+Your response MUST be a single, clean JSON object wrapped in a ```json markdown block. Do not add any conversational text, notes, or explanations outside of the JSON block.
+The target words for this task is this family of words:
+      subwords: - analyse
+        - analysed
+        - analyser
+        - analysing
+        - analysis
+        - analyst
+        - analytic
+        - analytical
+        - analytically
+        - analyze
+        - analyzed
+        - analyzing". Try to generate the same number of sentences for each word before.
+Generate a JSON object with four top-level keys: "definition", "match", "sentences" and "pronunciationExercises". 1. "definition" Key requirements: The value MUST be an accurate english definition of the first word from the family words.  2. "match": The value MUST be an array of all subwords unique objects.  Each object Must have two keys: "en" (English) and "pt" (Brazilian Portuguese), containing each subword and its accurate translation to "pt".
+3. "sentences" Key Requirements:
+The value MUST be an array of exactly 50 unique objects.
+Structure: Each object must have two keys: "en" (English) and "pt" (Brazilian Portuguese).
+Clarity and Focus Directive (Primary):
+The primary goal is to put a "spotlight" on [TARGET_WORD]. The sentence structure must be clear and direct, designed to showcase the word's meaning and common usage without unnecessary complexity.
+Sentence Length Directive: Each English sentence must be concise, ideally between 7 and 14 words. This ensures the context is clear but the target word is not lost.
+Advanced Context Directive:
+Although the sentence structure is concise, the context, vocabulary, and nuance must remain appropriate for a C1/C2 level.
+Natural Usage & Translation Directive:
+Ensure [TARGET_WORD] is the most natural and fitting choice for the sentence's meaning. Do not force it where a synonym would be better.
+The Brazilian Portuguese translation (pt) must be contextually accurate and natural, not a literal word-for-word translation. The [TARGET_WORD] inside the sentence must be placed between double keys like {{[TARGET_WORD]}}
+4. "pronunciationExercises" Key Requirements:
+The value MUST be an array of exactly 15 unique objects.
+Structure: Each object must have three keys: "question", "options", and "correct".
+Content:
+"question" and "correct" must both be the target word, [TARGET_WORD].
+"options" must be an array of two strings: [TARGET_WORD] and a different, phonetically similar English word that could be a common point of confusion.
+The order of the words in the "options" array should be randomized for each object.
+Final instruction: Provide ONLY the raw JSON object inside the specified markdown block.
